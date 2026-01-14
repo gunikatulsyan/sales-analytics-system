@@ -27,22 +27,19 @@ Automated Sales Report
 sales-analytics-system/
 │
 ├── data/
-│   ├── sales_data.txt
-│   └── enriched_sales_data.txt
+│   └── sales_data.txt
 │
 ├── utils/
-│   ├── _init_.py
+│   ├── __init__.py
 │   ├── file_handler.py
 │   ├── data_processor.py
-│   ├── api_handler.py
-│   └── report_generator.py
+│   └── api_handler.py
 │
 ├── output/
-│   └── sales_report.txt
 │
 ├── main.py
 ├── requirements.txt
-└── README.md\
+└── README.md
 
 
 * Part 1: File Handling & Preprocessing
