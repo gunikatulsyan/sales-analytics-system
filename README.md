@@ -3,6 +3,7 @@ Description
 
 This project implements a Python-based Sales Analytics System that processes raw sales transaction data, cleans and validates records, performs multiple analytical computations, integrates external product data via an API, enriches transactions, and generates structured output files and a formatted sales report.
 
+
 Architecture at a Glance
 
 Raw Sales Data (TXT)
@@ -18,6 +19,30 @@ API Enrichment
 Enriched Dataset
         ↓
 Automated Sales Report
+
+
+
+Repository Structure:
+
+sales-analytics-system/
+│
+├── data/
+│   ├── sales_data.txt
+│   └── enriched_sales_data.txt
+│
+├── utils/
+│   ├── _init_.py
+│   ├── file_handler.py
+│   ├── data_processor.py
+│   ├── api_handler.py
+│   └── report_generator.py
+│
+├── output/
+│   └── sales_report.txt
+│
+├── main.py
+├── requirements.txt
+└── README.md
 
 
 Functionality:
