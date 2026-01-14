@@ -84,6 +84,22 @@ Analytics Implemented
 
 These analytics simulate *real-world business KPIs* used for strategic decision-making.
 
+* Part 3: API Integration
+
+    API Enrichment
+
+•⁠  ⁠Integrates a simulated external product API  
+•⁠  ⁠Fetches additional product metadata such as:
+  - Product category
+  - Brand
+  - Rating  
+•⁠  ⁠Uses structured mappings to efficiently enrich transactions  
+•⁠  ⁠Tracks:
+  - Successful API enrichments  
+  - Failed or unmatched products  
+•⁠  ⁠Saves enriched transaction data to a separate output file  
+
+Demonstrates real-world API integration concepts and fault tolerance.
 
 
 * Functionality:
