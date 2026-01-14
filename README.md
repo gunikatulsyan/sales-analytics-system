@@ -1,10 +1,10 @@
-Sales Analytics System
+* Sales Analytics System
 Description
 
 This project implements a Python-based Sales Analytics System that processes raw sales transaction data, cleans and validates records, performs multiple analytical computations, integrates external product data via an API, enriches transactions, and generates structured output files and a formatted sales report.
 
 
-Architecture at a Glance
+* Architecture at a Glance
 
 Raw Sales Data (TXT)
         ↓
@@ -22,7 +22,7 @@ Automated Sales Report
 
 
 
-Repository Structure:
+* Repository Structure:
 
 sales-analytics-system/
 │
@@ -45,8 +45,8 @@ sales-analytics-system/
 └── README.md\
 
 
-Part 1: File Handling & Preprocessing
-Key Features
+* Part 1: File Handling & Preprocessing
+    Key Features
 
 •⁠  ⁠Reads raw sales data with proper UTF-8 encoding handling  
 •⁠  ⁠Parses pipe-separated (⁠ | ⁠) transaction records  
@@ -66,7 +66,27 @@ Key Features
 
 
 
-Functionality:
+* Part 2: Data Processing & Analytics
+
+Analytics Implemented
+
+•⁠  ⁠Total revenue calculation across all valid transactions  
+•⁠  ⁠Region-wise sales performance with percentage contribution  
+•⁠  ⁠Identification of top-selling products by quantity and revenue  
+•⁠  ⁠Detection of low-performing products for business insights  
+•⁠  ⁠Customer purchase behavior analysis including:
+  - Total spend
+  - Purchase count
+  - Average order value  
+•⁠  ⁠Date-based analysis:
+  - Daily sales trend
+  - Peak sales day identification  
+
+These analytics simulate *real-world business KPIs* used for strategic decision-making.
+
+
+
+* Functionality:
 
     Reads and parses pipe-delimited sales data
     Cleans and validates transaction records
@@ -81,7 +101,7 @@ Functionality:
     Generates enriched data file and comprehensive sales report
     Handles errors gracefully without program termination
 
-How to Run
+* How to Run
 
 Install dependencies:
     pip install -r requirements.txt
@@ -95,4 +115,3 @@ Enriched Transactions: data/enriched_sales_data.txt
 Sales Report: output/sales_report.txt
 
 Files are generated on every execution, even if input data is empty
-```
