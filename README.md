@@ -177,3 +177,16 @@ Enriched Transactions: data/enriched_sales_data.txt
 Sales Report: output/sales_report.txt
 
 Files are generated on every execution, even if input data is empty
+
+* Technologies Used
+
+| Category | Technology |
+|--------|-----------|
+| Programming Language | Python 3.x |
+| Data Processing | Python Standard Library |
+| File Handling | Text & Encoding Handling |
+| API Integration | Simulated REST API |
+| Reporting | Formatted Text Reports |
+| Version Control | Git |
+| Code Hosting | GitHub |
+| Operating System | macOS / Linux / Windows |
