@@ -86,7 +86,7 @@ These analytics simulate *real-world business KPIs* used for strategic decision-
 
 * Part 3: API Integration
 
-    API Enrichment
+API Enrichment:
 
 •⁠  ⁠Integrates a simulated external product API  
 •⁠  ⁠Fetches additional product metadata such as:
@@ -100,6 +100,27 @@ These analytics simulate *real-world business KPIs* used for strategic decision-
 •⁠  ⁠Saves enriched transaction data to a separate output file  
 
 Demonstrates real-world API integration concepts and fault tolerance.
+
+
+* Part 4: Automated Report Generation
+
+The system automatically generates a *professional sales analytics report* containing structured business insights.
+
+Report Sections:
+
+The report includes the following sections:
+
+1.⁠ ⁠Report header and metadata  
+2.⁠ ⁠Overall sales summary  
+3.⁠ ⁠Region-wise performance analysis  
+4.⁠ ⁠Top 5 products by sales  
+5.⁠ ⁠Top 5 customers by spending  
+6.⁠ ⁠Daily sales trend analysis  
+7.⁠ ⁠Product performance evaluation  
+8.⁠ ⁠API enrichment summary  
+
+Generated report location:
+output/sales_report.txt
 
 
 * Functionality:
