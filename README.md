@@ -42,7 +42,28 @@ sales-analytics-system/
 │
 ├── main.py
 ├── requirements.txt
-└── README.md
+└── README.md\
+
+
+Part 1: File Handling & Preprocessing
+Key Features
+
+•⁠  ⁠Reads raw sales data with proper UTF-8 encoding handling  
+•⁠  ⁠Parses pipe-separated (⁠ | ⁠) transaction records  
+•⁠  ⁠Cleans messy data by handling:
+  - Commas in numeric fields  
+  - Invalid or inconsistent data types  
+  - Missing or malformed fields  
+•⁠  ⁠Applies strict validation rules for:
+  - Transaction IDs  
+  - Product IDs  
+  - Customer IDs  
+  - Quantity and price values  
+•⁠  ⁠Supports optional filtering by:
+  - Region  
+  - Transaction amount range  
+
+
 
 
 Functionality:
