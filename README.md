@@ -122,6 +122,31 @@ The report includes the following sections:
 Generated report location:
 output/sales_report.txt
 
+* Part 5: Main Application
+
+
+The project includes an interactive command-line application that executes the entire analytics pipeline step-by-step.
+
+Key Capabilities:
+
+•⁠  ⁠Displays clear progress indicators for each stage  
+•⁠  ⁠Provides optional user-driven filtering:
+  - Region selection
+  - Transaction amount range  
+•⁠  ⁠Handles runtime errors gracefully using ⁠ try-except ⁠ blocks  
+•⁠  ⁠Executes the full pipeline end-to-end:
+  - File reading
+  - Data cleaning & validation
+  - Analytics processing
+  - API enrichment
+  - Report generation  
+
+Sample Console Flow:
+
+[1/10] Reading sales data...
+[2/10] Parsing and cleaning data...
+[3/10] Filter options available...
+[10/10] Process Complete!
 
 * Functionality:
 
