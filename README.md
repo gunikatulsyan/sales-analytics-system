@@ -164,6 +164,10 @@ Invalid transactions do not affect analytics
 
 API enrichment gracefully degrades when matches are unavailable
 
+📝 Final Note
+
+This project was built to reflect real-world data pipeline behavior, focusing on correctness, clarity, and maintainability rather than overengineering or unnecessary complexity.
+
 ## 🛠️ Technologies Used
 
 | Technology / Tool | Purpose |
@@ -175,9 +179,3 @@ API enrichment gracefully degrades when matches are unavailable
 | GitHub | Remote repository hosting and project submission |
 | VS Code | Code editor used for development |
 | Markdown | Documentation and README formatting |
-
-
-
-📝 Final Note
-
-This project was built to reflect real-world data pipeline behavior, focusing on correctness, clarity, and maintainability rather than overengineering or unnecessary complexity.
