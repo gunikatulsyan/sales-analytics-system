@@ -168,13 +168,14 @@ API enrichment gracefully degrades when matches are unavailable
 
 | Technology / Tool | Purpose |
 |------------------|---------|
-| **Python 3** | Core programming language for data processing and analytics |
-| **Requests** | Fetching external product data from DummyJSON API |
-| **DummyJSON API** | External API used for product metadata enrichment |
-| **Git** | Version control and commit tracking |
-| **GitHub** | Remote repository hosting and project submission |
-| **VS Code** | Code editor used for development |
-| **Markdown** | Documentation and README formatting |
+| Python 3 | Core programming language for data processing and analytics |
+| Requests | Fetching external product data from DummyJSON API |
+| DummyJSON API | External API used for product metadata enrichment |
+| Git | Version control and commit tracking |
+| GitHub | Remote repository hosting and project submission |
+| VS Code | Code editor used for development |
+| Markdown | Documentation and README formatting |
+
 
 
 📝 Final Note
