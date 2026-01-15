@@ -27,23 +27,22 @@ This project focuses on **clean architecture, defensive programming, and end-to-
 
 ## 🗂️ Project Structure
 
+```text
 sales-analytics-system/
 ├── main.py
 ├── README.md
 ├── requirements.txt
-│
 ├── data/
 │   ├── sales_data.txt
 │   └── enriched_sales_data.txt
-│
 ├── output/
 │   └── sales_report.txt
-│
 └── utils/
     ├── __init__.py
     ├── file_handler.py
     ├── data_processor.py
     └── api_handler.py
+
 
 ⚙️ Core Functionality
 1. Data Ingestion
