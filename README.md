@@ -1,189 +1,170 @@
-* Sales Analytics System
-Description
+# 📈 Sales Analytics System  
+*A modular data analytics pipeline with API integration and reporting*
 
-This project implements a Python-based Sales Analytics System that processes raw sales transaction data, cleans and validates records, performs multiple analytical computations, integrates external product data via an API, enriches transactions, and generates structured output files and a formatted sales report.
+---
 
+## 🚀 Project Overview
 
-* Architecture at a Glance
+The **Sales Analytics System** is a Python-based data processing and analytics application designed to transform raw sales transaction data into meaningful business insights.
 
-Raw Sales Data (TXT)
-        ↓
-File Handling & Cleaning
-        ↓
-Validated Transactions
-        ↓
-Business Analytics
-        ↓
-API Enrichment
-        ↓
-Enriched Dataset
-        ↓
-Automated Sales Report
+The system reads unstructured sales data, cleans and validates records, performs multi-dimensional sales analysis, integrates external product metadata via an API, enriches transaction records, and generates structured output files along with a comprehensive sales report.
 
+This project focuses on **clean architecture, defensive programming, and end-to-end execution flow**, rather than isolated scripts.
 
+---
 
-* Repository Structure:
+## 🧠 What This Project Demonstrates
+
+- Structured data ingestion and validation  
+- Modular analytics pipeline design  
+- Defensive handling of incomplete or invalid data  
+- API integration and data enrichment  
+- Report generation with real business metrics  
+- Clear separation of concerns across modules  
+- Professional project organization and version control  
+
+---
+
+## 🗂️ Project Structure
 
 sales-analytics-system/
+├── main.py
+├── README.md
+├── requirements.txt
 │
 ├── data/
-│   └── sales_data.txt
-│
-├── utils/
-│   ├── __init__.py
-│   ├── file_handler.py
-│   ├── data_processor.py
-│   └── api_handler.py
+│   ├── sales_data.txt
+│   └── enriched_sales_data.txt
 │
 ├── output/
+│   └── sales_report.txt
 │
-├── main.py
-├── requirements.txt
-└── README.md
+└── utils/
+    ├── __init__.py
+    ├── file_handler.py
+    ├── data_processor.py
+    └── api_handler.py
 
+⚙️ Core Functionality
+1. Data Ingestion
 
-* Part 1: File Handling & Preprocessing
-    Key Features
+Reads pipe-delimited (|) sales transaction data
 
-•⁠  ⁠Reads raw sales data with proper UTF-8 encoding handling  
-•⁠  ⁠Parses pipe-separated (⁠ | ⁠) transaction records  
-•⁠  ⁠Cleans messy data by handling:
-  - Commas in numeric fields  
-  - Invalid or inconsistent data types  
-  - Missing or malformed fields  
-•⁠  ⁠Applies strict validation rules for:
-  - Transaction IDs  
-  - Product IDs  
-  - Customer IDs  
-  - Quantity and price values  
-•⁠  ⁠Supports optional filtering by:
-  - Region  
-  - Transaction amount range  
+Handles encoding issues gracefully
 
+Skips empty and malformed records
 
+2. Data Cleaning & Validation
 
+Cleans numeric and text fields
 
-* Part 2: Data Processing & Analytics
+Removes invalid transactions based on defined business rules
 
-Analytics Implemented
+Tracks valid and invalid record counts
 
-•⁠  ⁠Total revenue calculation across all valid transactions  
-•⁠  ⁠Region-wise sales performance with percentage contribution  
-•⁠  ⁠Identification of top-selling products by quantity and revenue  
-•⁠  ⁠Detection of low-performing products for business insights  
-•⁠  ⁠Customer purchase behavior analysis including:
-  - Total spend
-  - Purchase count
-  - Average order value  
-•⁠  ⁠Date-based analysis:
-  - Daily sales trend
-  - Peak sales day identification  
+3. Optional Filtering
 
-These analytics simulate *real-world business KPIs* used for strategic decision-making.
+Users can optionally filter transactions by:
 
-* Part 3: API Integration
+Region
 
-API Enrichment:
+Transaction amount range
 
-•⁠  ⁠Integrates a simulated external product API  
-•⁠  ⁠Fetches additional product metadata such as:
-  - Product category
-  - Brand
-  - Rating  
-•⁠  ⁠Uses structured mappings to efficiently enrich transactions  
-•⁠  ⁠Tracks:
-  - Successful API enrichments  
-  - Failed or unmatched products  
-•⁠  ⁠Saves enriched transaction data to a separate output file  
+Filtering is applied before validation to preserve logical flow.
 
-Demonstrates real-world API integration concepts and fault tolerance.
+4. Sales Analytics
 
+The system performs multiple analyses, including:
 
-* Part 4: Automated Report Generation
+Total revenue calculation
 
-The system automatically generates a *professional sales analytics report* containing structured business insights.
+Region-wise sales performance
 
-Report Sections:
+Top and low-performing products
 
-The report includes the following sections:
+Customer purchase behavior
 
-1.⁠ ⁠Report header and metadata  
-2.⁠ ⁠Overall sales summary  
-3.⁠ ⁠Region-wise performance analysis  
-4.⁠ ⁠Top 5 products by sales  
-5.⁠ ⁠Top 5 customers by spending  
-6.⁠ ⁠Daily sales trend analysis  
-7.⁠ ⁠Product performance evaluation  
-8.⁠ ⁠API enrichment summary  
+Daily sales trends
 
-Generated report location:
-output/sales_report.txt
+Peak sales day identification
 
-* Part 5: Main Application
+5. API Integration
 
+Fetches external product data from the DummyJSON API
 
-The project includes an interactive command-line application that executes the entire analytics pipeline step-by-step.
+Maps internal product IDs to API metadata (category, brand)
 
-Key Capabilities:
+6. Data Enrichment
 
-•⁠  ⁠Displays clear progress indicators for each stage  
-•⁠  ⁠Provides optional user-driven filtering:
-  - Region selection
-  - Transaction amount range  
-•⁠  ⁠Handles runtime errors gracefully using ⁠ try-except ⁠ blocks  
-•⁠  ⁠Executes the full pipeline end-to-end:
-  - File reading
-  - Data cleaning & validation
-  - Analytics processing
-  - API enrichment
-  - Report generation  
+Enriches sales transactions with API product information
 
-Sample Console Flow:
+Adds enrichment flags to indicate match success
 
-[1/10] Reading sales data...
-[2/10] Parsing and cleaning data...
-[3/10] Filter options available...
-[10/10] Process Complete!
+Preserves all original transaction records
 
-* Functionality:
+7. Report Generation
 
-    Reads and parses pipe-delimited sales data
-    Cleans and validates transaction records
-    Supports optional filtering by region and amount
-    Performs sales analysis:
-        Revenue calculation
-        Region-wise performance
-        Product and customer analysis
-        Daily sales trends
-    Fetches product data from an external API
-    Enriches transactions with API product metadata
-    Generates enriched data file and comprehensive sales report
-    Handles errors gracefully without program termination
+Generates a structured, formatted sales report containing:
 
-* How to Run
+Overall summary
 
-Install dependencies:
-    pip install -r requirements.txt
+Regional performance
 
-Execute the program:
-    python3 main.py
+Product and customer rankings
 
-Output Files
+Daily trends
 
-Enriched Transactions: data/enriched_sales_data.txt
-Sales Report: output/sales_report.txt
+API enrichment summary
 
-Files are generated on every execution, even if input data is empty
+▶️ How to Run
+1. Install Dependencies
 
-* Technologies Used
+Ensure Python 3 is installed, then run:
+pip install -r requirements.txt
 
-| Category | Technology |
-|--------|-----------|
-| Programming Language | Python 3.x |
-| Data Processing | Python Standard Library |
-| File Handling | Text & Encoding Handling |
-| API Integration | Simulated REST API |
-| Reporting | Formatted Text Reports |
-| Version Control | Git |
-| Code Hosting | GitHub |
-| Operating System | macOS / Linux / Windows |
+2. Execute the Program
+
+From the project root directory:
+python3 main.py
+
+📄 Output Files
+
+data/enriched_sales_data.txt : 	Enriched transaction data with API metadata
+
+output/sales_report.txt	: Comprehensive formatted analytics report
+
+Output files are generated on every run, even when input data is empty, ensuring deterministic behavior.
+
+🛡️ Error Handling & Reliability
+
+Entire execution wrapped in try-except blocks
+
+API failures handled without crashing the system
+
+Empty or missing data handled safely
+
+No hardcoded absolute file paths (portable execution)
+
+📌 Design Principles Followed
+
+Separation of concerns (I/O, processing, API, reporting)
+
+Modular architecture
+
+Defensive programming
+
+Readable, maintainable code
+
+Predictable outputs
+
+🧪 Edge Case Handling
+
+Empty input files still generate valid output files
+
+Invalid transactions do not affect analytics
+
+API enrichment gracefully degrades when matches are unavailable
+
+📝 Final Note
+
+This project was built to reflect real-world data pipeline behavior, focusing on correctness, clarity, and maintainability rather than overengineering or unnecessary complexity.
